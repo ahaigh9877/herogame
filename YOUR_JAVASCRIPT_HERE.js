@@ -1,5 +1,7 @@
 // Write your JS here
 
+window.alert("This 'game' is far from finished, but I am out of time, and it does do some things at least. Enter your name, then click the big button at the bottom to make either a weapon, an enemy, or an inn appear on the grid. Click the weapon to add it to inventory, click the enemy to kill it (health goes down) and click the inn to restore health. If your health reaches 0 you get informed that you have died. The end.")
+
 let hero = {
     name: "Brian",
     heroic: false,
@@ -33,7 +35,7 @@ function updateStats() {
 }
 
 
-// hero.name = window.prompt("What is your name?");
+hero.name = window.prompt("What is your name?","Idiot McIdiotface");
 
 updateStats();
 
@@ -234,6 +236,9 @@ function equipWeapon(person) {
 
 // }
 
+
+// function combining the other ones, producing either weapon, enemy or inn, with different probabilities.
+// 
 function addSomething() {
     // 9 items. more = more likely to appear.
     const probArray = [

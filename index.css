@@ -6,6 +6,15 @@
     margin: 5%;
     padding: 20px;
     box-sizing: border-box;
+    justify-items: center;
+}
+
+#idiot{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #weapon, #inn{
@@ -19,7 +28,7 @@
 
 #gameGrid {
     margin: 20px 20px 0px 20px;
-    height: 900px;
+    height: 800px;
     background-color: darkgreen;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -41,7 +50,6 @@
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
-    height: 25%;
     background-color: #f3eba5;
     padding: 20px 40px;
     margin: 20px;
@@ -52,6 +60,8 @@
     flex-direction: column;
     align-content: stretch;
 }
+
+
 
 h2{
     font-family: MedievalSharp, sans-serif;
@@ -66,7 +76,7 @@ h2{
 #statsBox {
     background-color: #b5a517;
     width: fit-content;
-    max-width: 350px;
+    max-width: 300px;
     height: 50%;
     margin-top: 20px;
     padding: 20px;
@@ -77,6 +87,7 @@ h2{
 }
 
 #bag {
+   
     width: 90%;
     filter: drop-shadow(5px 5px 5px grey);
 }
@@ -93,9 +104,9 @@ h2{
 
 #addButton {
     margin: 20px;
-    padding: 40px;
+    padding: 20px;
     font-family: MedievalSharp, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 3px;
     color: darkred;
     background-image: linear-gradient(#f6f0bb,#fcfae8);
