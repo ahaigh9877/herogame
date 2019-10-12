@@ -1,0 +1,9 @@
+#statsBox {
+    display: inline-block;
+    background-color: darkgoldenrod;
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
