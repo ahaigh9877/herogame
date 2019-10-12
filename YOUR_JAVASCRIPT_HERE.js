@@ -70,7 +70,7 @@ function addWeapon(weapon) {
     };
 
     // now put the weapon in a random square. Generate random number 0-8. I'll have to figure out what to do if the square is filled.
-    const gridRand = Math.floor(Math.random()*9);
+    const gridRand = "grid"+Math.floor(Math.random()*9);
     const gridSquare = document.getElementById(gridRand);
     console.log(gridSquare);
 
@@ -102,7 +102,7 @@ function addEnemy(enemy) {
     };
 
     // now put the enemy in a random square. Generate random number 0-8. I'll have to figure out what to do if the square is filled.
-    const gridRand = Math.floor(Math.random()*9);
+    const gridRand = "grid"+Math.floor(Math.random()*9);
     const gridSquare = document.getElementById(gridRand);
 
     // make the img clickable and fight-able
@@ -111,6 +111,7 @@ function addEnemy(enemy) {
 
         gridSquare.removeChild(enemyImg);
     })
+
     gridSquare.appendChild(enemyImg);
 }
 

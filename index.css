@@ -13,7 +13,7 @@
     filter: drop-shadow(5px 5px 5px grey);
 }
 
-.weapon{
+.weapon .enemy{
     filter: drop-shadow(5px 5px 5px rgba(50,50,50,0.5));
 }
 
