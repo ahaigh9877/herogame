@@ -19,6 +19,12 @@ function updateStats() {
     Health: ${hero.health}
     Current weapon: ${hero.equippedWeapon.type}, damage: ${hero.equippedWeapon.damage}
     `;
+    if(hero.health < 1){
+        const deadBox = document.createElement("div");
+        deadBox.id="deadBox";
+        deadBox.innerText="YOU DED";
+        statsBox.appendChild(deadBox);
+    }
 }
 
 
@@ -70,9 +76,25 @@ function addWeapon(weapon) {
     };
 
     // now put the weapon in a random square. Generate random number 0-8. I'll have to figure out what to do if the square is filled.
-    const gridRand = "grid"+Math.floor(Math.random()*9);
-    const gridSquare = document.getElementById(gridRand);
-    console.log(gridSquare);
+    let gridRand;
+    let gridSquare;
+
+    for (let index = 0; index < 8; index++) {
+        gridRand = "grid"+Math.floor(Math.random()*9);
+        gridSquare = document.getElementById(gridRand);
+        console.log("how about square: ",gridRand);
+        if(!gridSquare.firstChild){
+            console.log('it is empty. put it in square ',gridRand);
+            break;
+        }
+        
+    }
+
+
+
+    // const gridRand = "grid"+Math.floor(Math.random()*9);
+    // const gridSquare = document.getElementById(gridRand);
+    // console.log(gridSquare);
 
     // make the img clickable and pick-uppable
     weaponImg.addEventListener('click',function(event){
@@ -102,14 +124,27 @@ function addEnemy(enemy) {
     };
 
     // now put the enemy in a random square. Generate random number 0-8. I'll have to figure out what to do if the square is filled.
-    const gridRand = "grid"+Math.floor(Math.random()*9);
-    const gridSquare = document.getElementById(gridRand);
+    let gridRand;
+    let gridSquare;
 
-    // make the img clickable and fight-able
+    for (let index = 0; index < 8; index++) {
+        gridRand = "grid"+Math.floor(Math.random()*9);
+        gridSquare = document.getElementById(gridRand);
+        console.log("how about square: ",gridRand);
+        if(!gridSquare.firstChild){
+            console.log('it is empty. put it in square ',gridRand);
+            break;
+        }
+        
+    }
+
+    // make the img clickable and ?fight-able?
     enemyImg.addEventListener('click',function(event){
         //fightEnemy(hero,addedEnemy);
-
+        //probably no time for fighting, so let's make removal cost a bit of health
+        hero.health -=2;
         gridSquare.removeChild(enemyImg);
+        updateStats();
     })
 
     gridSquare.appendChild(enemyImg);

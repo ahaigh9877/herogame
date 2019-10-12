@@ -13,7 +13,7 @@
     filter: drop-shadow(5px 5px 5px grey);
 }
 
-.weapon .enemy{
+.weapon, .enemy{
     filter: drop-shadow(5px 5px 5px rgba(50,50,50,0.5));
 }
 
@@ -86,3 +86,7 @@ h2{
     filter: drop-shadow(2px 2px 2px grey);
 }
 
+#deadBox{
+    font-size: 50px;
+    color: red;
+}
