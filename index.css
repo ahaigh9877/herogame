@@ -90,3 +90,17 @@ h2{
     font-size: 50px;
     color: red;
 }
+
+#addButton {
+    margin: 20px;
+    padding: 40px;
+    font-family: MedievalSharp, sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: darkred;
+    background-image: linear-gradient(#f6f0bb,#fcfae8);
+    text-align: center;
+    margin: 10px auto;
+    text-shadow: 0 0 5px red;
+    border-radius: 40px;
+}
