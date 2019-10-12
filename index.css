@@ -1,9 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=MedievalSharp&display=swap');
+
+#gameSpace{
+    background-color: #f9f5d2;
+    border-radius: 20px;
+    margin: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#weapon, #inn{
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 5px grey);
+}
+
+.weapon{
+    filter: drop-shadow(5px 5px 5px rgba(50,50,50,0.5));
+}
+
+#gameGrid {
+    margin: 20px 20px 0px 20px;
+    height: 900px;
+    background-color: darkgreen;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.square{
+    background-color: darkseagreen;
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+}
+
+
+#bottombox{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    height: 25%;
+    background-color: #f3eba5;
+    padding: 20px 40px;
+    margin: 20px;
+}
+
+.bottomContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+h2{
+    font-family: MedievalSharp, sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: darkred;
+    text-align: center;
+    margin: 10px auto;
+    text-shadow: 0 0 5px red;
+}
+
 #statsBox {
-    display: inline-block;
-    background-color: darkgoldenrod;
+    background-color: #b5a517;
     width: fit-content;
-    max-width: 400px;
-    height: fit-content;
+    max-width: 350px;
+    height: 50%;
+    margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
+    font-family: MedievalSharp, serif;
+    font-size: 20px;
+    box-shadow: 3px 3px 15px 2px rgb(161, 161, 161);
 }
+
+#bag {
+    width: 90%;
+    filter: drop-shadow(5px 5px 5px grey);
+}
+
+#bag:hover{
+    transform: translate(3px, 3px);
+    filter: drop-shadow(2px 2px 2px grey);
+}
+
